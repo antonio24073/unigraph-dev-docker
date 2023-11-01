@@ -1,0 +1,22 @@
+services:
+  unigraph-dev:
+    user: root
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+      - 8000:8000
+      - 5080:5080
+      - 7080:7080
+      - 9080:9080
+      - 6080:6080
+      - 3001:3001
+      - 3000:3000
+      - 4002:4002
+      - 4001:4001
+    volumes:
+      - ./data:/unigraph-dev-data
+      - ./secrets.env.json:/unigraph-dev/packages/unigraph-dev-backend/dist/secrets.env.json
+      - ./secrets.env.json:/unigraph-dev/secrets.env.json
