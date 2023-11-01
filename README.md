@@ -1,7 +1,3 @@
 # unigraph-dev-docker
 
-## Running
-
-```sh
-docker compose up
-```
+## Not working yet
